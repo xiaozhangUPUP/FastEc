@@ -3,9 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="hhhhhhhhh" />-->
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:text="11 {fa-heart-o} 22"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="hhhhhhhhh" />
+        android:layout_height="wrap_content" />
 
 </android.support.constraint.ConstraintLayout>
