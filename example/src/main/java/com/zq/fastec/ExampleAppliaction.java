@@ -2,6 +2,7 @@ package com.zq.fastec;
 
 import android.app.Application;
 
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.zq.latte_core.app.Latte;
 
 /**
@@ -12,7 +13,9 @@ public class ExampleAppliaction extends Application {
     public void onCreate() {
         super.onCreate();
         Latte.init(this)
+                .withIcon(new FontAwesomeModule())
                 .withApiHost("")
                 .configure();
+
     }
 }

@@ -13,6 +13,14 @@ public class Latte {
         return Configurator.getInstance();
     }
 
+    public static Configurator getConfigurator() {
+        return Configurator.getInstance();
+    }
+
+    public static <T> T getConfiguration(Object key) {
+        return getConfigurator().getConfiguration(key);
+    }
+
     private static HashMap<String, Object> getConfigurations() {
         return Configurator.getInstance().getLatteConfigs();
     }
