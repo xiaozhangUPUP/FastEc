@@ -9,6 +9,7 @@
         <!--android:text="hhhhhhhhh" />-->
 
     <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/tv_test"
         android:text="11 {fa-heart-o} 22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

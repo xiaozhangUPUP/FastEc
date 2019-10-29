@@ -1,5 +1,7 @@
 package com.zq.latte_core.delegates;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +14,8 @@ import butterknife.Unbinder;
 import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
 
 public abstract class BaseDelegate extends SwipeBackFragment {
+
+    public Activity mActivity;
 
     public abstract Object setLayout();
     public abstract void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView);
@@ -40,5 +44,11 @@ public abstract class BaseDelegate extends SwipeBackFragment {
         if (mUnbinder != null) {
             mUnbinder.unbind();
         }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mActivity = (Activity) context;
     }
 }

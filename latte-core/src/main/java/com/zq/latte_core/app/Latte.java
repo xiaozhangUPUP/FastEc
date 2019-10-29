@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 public class Latte {
     public static Configurator init(Context context) {
-        getConfigurations().put(ConfigKeys.APPLICATION_CONTEXT.name(), context.getApplicationContext());
+        getConfigurations().put(ConfigKeys.APPLICATION_CONTEXT, context.getApplicationContext());
         return Configurator.getInstance();
     }
 
@@ -18,11 +18,11 @@ public class Latte {
         return Configurator.getInstance();
     }
 
-    public static <T> T getConfiguration(Enum<ConfigKeys> key) {
+    public static <T> T getConfiguration(Object key) {
         return getConfigurator().getConfiguration(key);
     }
 
-    private static HashMap<String, Object> getConfigurations() {
+    private static HashMap<Object, Object> getConfigurations() {
         return Configurator.getInstance().getLatteConfigs();
     }
 

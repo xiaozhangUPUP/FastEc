@@ -13,6 +13,7 @@ import com.zq.latte_core.net.callback.IFailure;
 import com.zq.latte_core.net.callback.ISuccess;
 
 public class ExampleDelegate extends LatteDelegate {
+
     @Override
     public Object setLayout() {
         return R.layout.delegate_example;
@@ -30,7 +31,7 @@ public class ExampleDelegate extends LatteDelegate {
                 .success(new ISuccess() {
                     @Override
                     public void onSuccess(String response) {
-//                        Toast.makeText(getContext(), response, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), response, Toast.LENGTH_LONG).show();
                     }
                 })
                 .failure(new IFailure() {
@@ -42,10 +43,11 @@ public class ExampleDelegate extends LatteDelegate {
                 .error(new IError() {
                     @Override
                     public void onError(int code, String msg) {
-                        Toast.makeText(getContext(), "error: " + code +  " msg: " + msg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), "error: " + code + " msg: " + msg, Toast.LENGTH_LONG).show();
                     }
                 })
                 .build()
                 .get();
     }
+
 }
