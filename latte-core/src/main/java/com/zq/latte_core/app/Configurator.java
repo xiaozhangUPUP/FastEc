@@ -1,5 +1,6 @@
 package com.zq.latte_core.app;
 
+import android.app.Activity;
 import android.os.Handler;
 import android.util.Log;
 
@@ -20,6 +21,22 @@ public class Configurator {
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
     private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
     private static final Handler HANDLER = new Handler();
+
+    public final Configurator withWeChatAppId(String appId) {
+        LATTE_CONFIGS.put(ConfigKeys.WE_CHAT_APP_ID, appId);
+        return this;
+    }
+
+    public final Configurator withWeChatAppSecret(String appSecret) {
+        LATTE_CONFIGS.put(ConfigKeys.WE_CHAT_APP_SECRET, appSecret);
+        return this;
+    }
+
+    public final Configurator withActivity(Activity activity) {
+        LATTE_CONFIGS.put(ConfigKeys.ACTIVITY, activity);
+        return this;
+    }
+
 
     public final Configurator withLoaderDelayed(long delayed) {
         LATTE_CONFIGS.put(ConfigKeys.LOADER_DELAYED, delayed);

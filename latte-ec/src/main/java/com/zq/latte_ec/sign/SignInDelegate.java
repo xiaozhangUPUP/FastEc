@@ -13,6 +13,8 @@ import com.zq.latte_core.net.RestClient;
 import com.zq.latte_core.net.callback.IError;
 import com.zq.latte_core.net.callback.IFailure;
 import com.zq.latte_core.net.callback.ISuccess;
+import com.zq.latte_core.wechat.LatteWeChat;
+import com.zq.latte_core.wechat.callbacks.IWeChatSignInCallback;
 import com.zq.latte_ec.R;
 import com.zq.latte_ec.R2;
 import com.zq.latte_ec.http.requestbean.LoginRequestBean;
@@ -101,6 +103,14 @@ public class SignInDelegate extends LatteDelegate {
         } else if (rId == R.id.tv_link_sign_up) {
             start(new SignUpDelegate());
         } else if (rId == R.id.icon_sign_in_wechat) {
+            LatteWeChat.getInstance().onSignSuccess(new IWeChatSignInCallback() {
+                @Override
+                public void onSignInSuccess(String userInfo) {
+
+
+                }
+            })
+            .signIn();
         }
     }
 

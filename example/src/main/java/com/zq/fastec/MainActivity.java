@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 
 import com.zq.latte_core.activities.ProxyActivity;
+import com.zq.latte_core.app.Latte;
 import com.zq.latte_core.delegates.LatteDelegate;
 import com.zq.latte_core.ui.launcher.ILauncherListener;
 import com.zq.latte_core.ui.launcher.OnLauncherFinishTag;
@@ -21,6 +22,7 @@ public class MainActivity extends ProxyActivity implements ILauncherListener {
         if (actionBar != null) {
             actionBar.hide();
         }
+        Latte.getConfigurator().withActivity(this);
     }
 
     @Override
