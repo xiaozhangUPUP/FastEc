@@ -10,6 +10,7 @@ import com.zq.latte_core.delegates.LatteDelegate;
 import com.zq.latte_core.ui.launcher.ILauncherListener;
 import com.zq.latte_core.ui.launcher.OnLauncherFinishTag;
 import com.zq.latte_ec.launcher.LauncherDelegate;
+import com.zq.latte_ec.main.EcBottomDelegate;
 import com.zq.latte_ec.sign.SignInDelegate;
 
 public class MainActivity extends ProxyActivity implements ILauncherListener {
@@ -34,7 +35,7 @@ public class MainActivity extends ProxyActivity implements ILauncherListener {
     public void onLauncherFinish(OnLauncherFinishTag tag) {
         switch (tag) {
             case SIGNED:
-                startWithPop(new ExampleDelegate());
+                startWithPop(new EcBottomDelegate());
                 break;
             case NOT_SIGNED:
                 startWithPop(new SignInDelegate());
