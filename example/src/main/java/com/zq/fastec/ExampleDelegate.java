@@ -22,6 +22,7 @@ public class ExampleDelegate extends LatteDelegate {
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
 //        testRestClient();
+
     }
 
     private void testRestClient() {

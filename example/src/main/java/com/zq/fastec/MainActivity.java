@@ -13,6 +13,8 @@ import com.zq.latte_ec.launcher.LauncherDelegate;
 import com.zq.latte_ec.main.EcBottomDelegate;
 import com.zq.latte_ec.sign.SignInDelegate;
 
+import qiu.niorgai.StatusBarCompat;
+
 public class MainActivity extends ProxyActivity implements ILauncherListener {
 
     @Override
@@ -24,6 +26,8 @@ public class MainActivity extends ProxyActivity implements ILauncherListener {
             actionBar.hide();
         }
         Latte.getConfigurator().withActivity(this);
+        // 透明状态栏
+        StatusBarCompat.translucentStatusBar(this, true);
     }
 
     @Override
