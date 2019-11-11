@@ -28,9 +28,8 @@ dependencies {
     annotationProcessor project(':latte-compiler')
     api project(':latte-core')
     // butterknife依赖
-//    api 'com.jakewharton:butterknife:8.5.1'
+    //    api 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-
     debugImplementation 'com.didichuxing.doraemonkit:doraemonkit:1.2.8'
     releaseImplementation 'com.didichuxing.doraemonkit:doraemonkit-no-op:1.2.8'
 }

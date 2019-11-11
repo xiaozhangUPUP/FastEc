@@ -5,17 +5,11 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 import com.joanzapata.iconify.widget.IconTextView;
 import com.zq.latte_core.delegates.bottom.BottomItemDelegate;
-import com.zq.latte_core.net.RestClient;
-import com.zq.latte_core.net.callback.IError;
-import com.zq.latte_core.net.callback.IFailure;
-import com.zq.latte_core.net.callback.ISuccess;
 import com.zq.latte_core.ui.refresh.RefreshHandler;
 import com.zq.latte_ec.R;
 import com.zq.latte_ec.R2;
@@ -25,8 +19,6 @@ import butterknife.BindView;
 
 public class IndexDelegate extends BottomItemDelegate {
 
-    @BindView(R2.id.rv_index)
-    RecyclerView mRecyclerView = null;
     @BindView(R2.id.srl_index)
     SwipeRefreshLayout mRefreshLayout = null;
     @BindView(R2.id.tb_index)
@@ -63,28 +55,28 @@ public class IndexDelegate extends BottomItemDelegate {
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
         mRefreshHandler = new RefreshHandler(mRefreshLayout);
-        RestClient.builder()
-                .url("index")
-                .success(new ISuccess() {
-                    @Override
-                    public void onSuccess(String response) {
-                        Toast.makeText(getContext(), response, Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .error(new IError() {
-                    @Override
-                    public void onError(int code, String msg) {
-                        Toast.makeText(getContext(), "onError code: " + code + " , msg: " + msg, Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .failure(new IFailure() {
-                    @Override
-                    public void onFailure() {
-                        Toast.makeText(getContext(), "onFailure", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .build()
-                .get();
+//        RestClient.builder()
+//                .url("index")
+//                .success(new ISuccess() {
+//                    @Override
+//                    public void onSuccess(String response) {
+//                        Toast.makeText(getContext(), response, Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .error(new IError() {
+//                    @Override
+//                    public void onError(int code, String msg) {
+//                        Toast.makeText(getContext(), "onError code: " + code + " , msg: " + msg, Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .failure(new IFailure() {
+//                    @Override
+//                    public void onFailure() {
+//                        Toast.makeText(getContext(), "onFailure", Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .build()
+//                .get();
 
     }
 }

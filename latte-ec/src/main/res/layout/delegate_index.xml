@@ -8,19 +8,22 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/srl_index"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_index"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tb_index"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@android:color/transparent">
+        android:background="@android:color/transparent"
+        app:layout_behavior="com.zq.latte_ec.main.TranslucentBehavior">
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -65,5 +68,75 @@
         </android.support.v7.widget.LinearLayoutCompat>
 
     </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rv_index"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="\n\n\n\n\n\n\n\n\n\n\nhello indddsfsdfdsfsdfdsfdsfdfsdfdex!"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
