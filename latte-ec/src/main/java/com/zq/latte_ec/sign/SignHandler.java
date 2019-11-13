@@ -22,6 +22,7 @@ public class SignHandler {
         final UserProfile profile = new UserProfile(user.getId(), user.getId(), user.getEmail(), user.getLogo_url(), user.getUsername(), user.getMobi());
         DatabaseManager.getInstance().getDao().insert(profile);
 
+
         AccountManager.setSignState(true);
     }
 

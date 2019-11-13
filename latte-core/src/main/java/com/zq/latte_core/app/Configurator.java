@@ -2,10 +2,13 @@ package com.zq.latte_core.app;
 
 import android.app.Activity;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.Iconify;
+import com.zq.latte_core.delegates.web.event.Event;
+import com.zq.latte_core.delegates.web.event.EventManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,6 +24,12 @@ public class Configurator {
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
     private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
     private static final Handler HANDLER = new Handler();
+
+    public Configurator withWebEvent(@NonNull String name, @NonNull Event event) {
+        final EventManager manager = EventManager.getInstance();
+        manager.addEvent(name, event);
+        return this;
+    }
 
     public final Configurator withWeChatAppId(String appId) {
         LATTE_CONFIGS.put(ConfigKeys.WE_CHAT_APP_ID, appId);

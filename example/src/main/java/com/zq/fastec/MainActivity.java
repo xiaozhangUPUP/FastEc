@@ -28,6 +28,7 @@ public class MainActivity extends ProxyActivity implements ILauncherListener {
         Latte.getConfigurator().withActivity(this);
         // 透明状态栏
         StatusBarCompat.translucentStatusBar(this, true);
+
     }
 
     @Override
